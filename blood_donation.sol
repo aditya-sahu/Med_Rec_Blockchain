@@ -23,10 +23,10 @@ contract BloodRecord {
         //should i add this ? - string bloodgroup;
         uint16 age;
         string gender;
-        string state;
+    //    string state;
         string city;
-        string availability;
-        uint64 phnum;
+        //bool availability;
+        string phnum;
         uint128[] recindex;
 
     }
@@ -39,15 +39,15 @@ contract BloodRecord {
         return true;
     }
 
-    function updateDonor(uint64 uid,string donorname,string birthdate,string bloodgroup,uint16 age,string gender,string state,string city,string availability,uint64 phnum)public returns(bool) {
+    function updateDonor(uint64 uid,string donorname,string birthdate,string bloodgroup,uint16 age,string gender,string city,string phnum)public returns(bool) {
         
         bdonor[uid].donorname = donorname;
         bdonor[uid].birthdate = birthdate;
         bdonor[uid].age = age;
         bdonor[uid].gender = gender;
-        bdonor[uid].state = state;
+    //    bdonor[uid].state = state;
         bdonor[uid].city = city;
-        bdonor[uid].availability = availability;
+    //    bdonor[uid].availability = availability;
         bdonor[uid].phnum = phnum;
         return true;
     }
